@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>福尔摩斯解谜 - 维多利亚时代的秘密</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- 开始菜单 -->
+        <div id="main-menu" class="screen active">
+            <div class="menu-content">
+                <h1 class="game-title pixel-text">福尔摩斯解谜</h1>
+                <p class="subtitle pixel-text">维多利亚时代的秘密</p>
+                
+                <div class="menu-buttons">
+                    <button class="pixel-btn" id="new-game-btn">
+                        <span>开始游戏</span>
+                    </button>
+                    <button class="pixel-btn" id="continue-game-btn">
+                        <span>继续游戏</span>
+                    </button>
+                    <button class="pixel-btn" id="settings-btn">
+                        <span>设置</span>
+                    </button>
+                </div>
+                
+                <div class="menu-decoration">
+                    <div class="pixel-lamp"></div>
+                    <div class="pixel-fog"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 游戏主界面 -->
+        <div id="game-screen" class="screen">
+            <div class="game-ui">
+                <div class="top-bar">
+                    <div class="player-info">
+                        <span class="pixel-text">侦探: <span id="player-name">福尔摩斯</span></span>
+                        <span class="pixel-text">章节: <span id="chapter">1</span></span>
+                    </div>
+                    <button class="pixel-btn-small" id="menu-btn">菜单</button>
+                </div>
+                
+                <div class="game-content">
+                    <div class="scene-container">
+                        <canvas id="game-canvas"></canvas>
+                        <div id="scene-description" class="pixel-text"></div>
+                    </div>
+                    
+                    <div class="interaction-panel">
+                        <div id="dialogue-box" class="pixel-box">
+                            <p id="dialogue-text" class="pixel-text"></p>
+                            <div id="dialogue-options"></div>
+                        </div>
+                        
+                        <div id="inventory" class="pixel-box">
+                            <h3 class="pixel-text">物品栏</h3>
+                            <div id="inventory-items"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 加载界面 -->
+        <div id="loading-screen" class="screen">
+            <div class="loading-content">
+                <div class="pixel-spinner"></div>
+                <p class="pixel-text">加载中...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
